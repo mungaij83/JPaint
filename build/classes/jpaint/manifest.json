@@ -1,0 +1,32 @@
+ {"plugins":[{
+    "name": "Rectangle",
+    "class": "RectangleControl",
+    "package": "jpaint.plugin.rectangle"
+ },
+ {
+    "name": "Circle",
+    "class": "SphereControl",
+    "package": "jpaint.plugin.circle"
+ },
+ {
+    "name": "Brush",
+    "class": "BrushControl",
+    "package": "jpaint.plugin.brush"
+ },
+  {
+    "name": "Eraser",
+    "class": "EraserControl",
+    "package": "jpaint.plugin.eraser"
+ },
+  {
+    "name": "Line",
+    "class": "LineControl",
+    "package": "jpaint.plugin.line"
+ },
+ {
+    "name": "Text",
+    "class": "TextControl",
+    "package": "jpaint.plugin.text"
+ }
+]
+}

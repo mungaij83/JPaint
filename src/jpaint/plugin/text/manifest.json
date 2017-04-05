@@ -1,0 +1,5 @@
+ {
+    "name": "Text",
+    "class": "TextControl",
+    "package": "plugin.text"
+ }

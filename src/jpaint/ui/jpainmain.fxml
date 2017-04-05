@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="454.0" prefWidth="894.0" styleClass="Main" stylesheets="@win-style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jpaint.controllers.JPaintMain">
+    <stylesheets>
+        <URL value="@win-style.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="176.0" layoutY="139.0" prefHeight="200.0" prefWidth="100.0" styleClass="mainPanel" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <HBox fx:id="menuBar" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="890.0" spacing="10.0" styleClass="menu-bar">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <Region fx:id="region" prefHeight="31.0" prefWidth="559.0" HBox.hgrow="SOMETIMES" />
+                  <Button mnemonicParsing="false" onAction="#maximizeMinimize" styleClass="max-btn" text="M" />
+                  <Button mnemonicParsing="false" onAction="#iconify" styleClass="min-btn" text="__" />
+                  <Button mnemonicParsing="false" onAction="#closeApplication" styleClass="close-btn" text="X" />
+               </children>
+            </HBox>
+            <HBox prefHeight="88.0" prefWidth="888.0" styleClass="toolbarContainer">
+               <children>
+                  <VBox prefHeight="87.0" prefWidth="110.0" styleClass="ribbon-vgroup">
+                     <children>
+                        <HBox prefHeight="30.0" prefWidth="130.0" styleClass="ribbon-hgroup">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" styleClass="ribbon-button,save-btn" HBox.hgrow="SOMETIMES" />
+                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="57.0" styleClass="ribbon-button,open-btn" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="36.0" prefWidth="110.0" styleClass="ribbon-hgroup">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="58.0" styleClass="ribbon-button,new-document-btn" HBox.hgrow="SOMETIMES" />
+                              <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="55.0" styleClass="ribbon-button,delete-btn" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                        <Label prefHeight="16.0" prefWidth="94.0" styleClass="ribbonLabel" text="File" />
+                     </children></VBox>
+                  <VBox prefHeight="87.0" prefWidth="99.0">
+                     <children>
+                        <HBox prefHeight="35.0" prefWidth="100.0" styleClass="ribbon-hgroup">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="46.0" styleClass="ribbon-button,undo-btn" HBox.hgrow="SOMETIMES" />
+                              <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="52.0" styleClass="ribbon-button,redo-btn" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="33.0" prefWidth="130.0" styleClass="ribbon-hgroup">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="66.0" styleClass="ribbon-button" />
+                           </children>
+                        </HBox>
+                        <Label prefHeight="16.0" prefWidth="91.0" styleClass="ribbonLabel" text="Edit" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="87.0" prefWidth="119.0" styleClass="ribbon-vgroup">
+                     <children>
+                        <ChoiceBox fx:id="penSize" prefWidth="150.0" styleClass="choiceBox" />
+                        <ColorPicker fx:id="colorPicker" styleClass="choiceBox" />
+                        <Label prefHeight="24.0" prefWidth="119.0" styleClass="ribbonLabel" text="Color and Pen" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="87.0" prefWidth="140.0" styleClass="ribbon-vgroup">
+                     <children>
+                        <HBox prefHeight="33.0" prefWidth="140.0" styleClass="ribbon-hgroup">
+                           <children>
+                              <ToggleButton mnemonicParsing="false" styleClass="ribbon-button" text="B">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </ToggleButton>
+                              <ToggleButton mnemonicParsing="false" styleClass="ribbon-button" text="I">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </ToggleButton>
+                              <ToggleButton mnemonicParsing="false" styleClass="ribbon-button" text="U" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </ToggleButton>
+                              <ChoiceBox fx:id="fontSize" prefHeight="32.0" prefWidth="67.0" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="140.0" styleClass="ribbon-hgroup">
+                           <children>
+                              <ChoiceBox fx:id="fontFamily" prefHeight="20.0" prefWidth="140.0" styleClass="choiceBox" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                        <Label prefHeight="16.0" prefWidth="131.0" styleClass="ribbonLabel" text="Font" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </HBox>
+            <SplitPane dividerPositions="0.07900677200902935, 0.8623024830699775" focusTraversable="true" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <TilePane fx:id="pallet" layoutX="-23.0" layoutY="32.0" prefHeight="200.0" prefWidth="200.0" styleClass="pallet" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TabPane fx:id="docPanel" layoutX="14.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="385.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <VBox fx:id="previews" layoutY="71.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+            <HBox prefHeight="30.0" prefWidth="890.0" spacing="10.0" styleClass="footer">
+               <children>
+                  <Label styleClass="label" text="Status bar" />
+                  <Label fx:id="selectedToolLabel" styleClass="label" text="Selected Tool" />
+                  <Label fx:id="mousePosition" styleClass="label" text="Mouse possition" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

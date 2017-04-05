@@ -1,0 +1,5 @@
+ {
+    "name": "Eraser",
+    "class": "EraserControl",
+    "package": "plugin.eraser"
+ }

@@ -1,0 +1,195 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 20, 2017, 10:16:11 AM
+    Author     : njoroge
+*/
+
+.Main
+
+{
+    -fx-border-width: 1;
+    -fx-border-insets: 2;
+
+}
+.toolbarContainer {
+    -fx-background-color: 
+        linear-gradient(#dae0e7 0%, #ced4dd 14%, 
+        #c8ced7 15%, #dfe5e6 100%),
+        linear-gradient(#bdbfc1 0%, #9a9c9f 14%, 
+        #888b90 15%, #838686 100%),
+        linear-gradient(#eef1f6 0%, #e1e6ee 14%, 
+        #d5dbe7 15%, #eef4f4 79%, 
+        #ced4e6 79%, #afb6c8 100%);
+
+    -fx-background-insets: 1 0 1 1, 1, 1;
+    -fx-background-radius: 5,4,3;
+    -fx-padding: 1 1 0 1;
+}
+.ribbonLabel {
+    padding-top: 2px;
+    -fx-text-fill: #535459;
+}
+
+.ribbon-button {
+    
+    -fx-text-fill: #000000;
+    -fx-background-color: 
+        linear-gradient(#dae0e7 0%, #ced4dd 14%, #c8ced7 15%, #dfe5e6 100%),
+        linear-gradient(#bdbfc1 0%, #9a9c9f 14%, #888b90 15%, #838686 100%),
+        linear-gradient(#eef1f6 0%, #e1e6ee 14%, #d5dbe7 15%, #eef4f4 79%, 
+        #ced4e6 79%, #afb6c8 100%);
+
+    -fx-background-insets: 1 0 1 1, 1, 2 ;
+    -fx-background-radius: 5,4,3;
+    -fx-padding: 5 6 5 6;
+    
+    -fx-text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    -fx-border-radius:0px;
+}
+.ribbon-button:hover {
+    -fx-background-color: 
+        linear-gradient(#dae0e7 0%, #ced4dd 14%, #c8ced7 15%, #dfe5e6 100%),
+        linear-gradient(#bdbfc1 0%, #9a9c9f 14%, #888b90 15%, #838686 100%),
+        linear-gradient(#fef7d5 0%, #fae5a8 14%, #ffd048 15%, #ffe59f 78%, 
+        #ffe498 79%, #fff9cc 100%);    
+}
+.ribbon-button:selected {
+    -fx-background-color: 
+        linear-gradient(#dae0e7 0%, #ced4dd 14%, #c8ced7 15%, #dfe5e6 100%),
+        linear-gradient(#bdbfc1 0%, #9a9c9f 14%, #888b90 15%, #838686 100%),
+        linear-gradient(#fbdbb5 0%, #fec778 14%, #ffa636 15%, #fdeb9f 78%, 
+        #dfcd82 79%, #f0e7bf 100%);
+}
+.choiceBox {
+    -fx-padding: 3 5 3 5;
+}
+.ribbon-hgroup{
+    -fx-hgap:2px;
+    -fx-vgap:2px;
+    width:max-content;
+}
+.ribbon-vgroup{
+    -fx-hgap:0px;
+    -fx-vgap:0px;
+}
+.pallet{
+   -fx-border-insets: 2;
+   -fx-animated: true;
+   width: max-content;
+}
+.mainPanel{
+    -fx-background-insets: 2;
+    -fx-background-radius: 6;
+    -fx-border-color: gray;
+    -fx-border-style: solid;
+    //-fx-effect: dropshadow(three-pass-box, rgba(100, 100, 100, 1), 24, 0.5, 0, 0);
+}
+.footer{
+    -fx-background-insets: 2;
+    -fx-background-radius: 6;
+    -fx-text-fill: rgb(49, 89, 23);
+    -fx-border-color: gray;
+    -fx-border-style: solid;
+    -fx-panding:5px;
+}
+.footer .label{
+    -fx-text-size:14px;
+    -fx-color:blue;
+}
+button{
+    -fx-text-fill: rgb(49, 89, 23);
+    -fx-border-color: rgb(49, 89, 23);
+    width:100px;
+    height:100px;
+    -fx-border-radius: 5;
+    -fx-padding: 3 6 6 6;
+}
+
+.canvas{
+    -fx-border-color: #1612ec;
+    -fx-border-width:2px;
+    -fx-border-style: solid;
+    -fx-border-radius:1px;
+    -fx-padding:5px;
+}
+.menu-bar{
+    -fx-background-color: #21fe58;
+}
+.max-btn{
+    -fx-background-color: whitesmoke;
+    color:black;
+    -fx-border-radius: 2px;
+    -fx-border-color: purple;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+.min-btn{
+    -fx-background-color:whitesmoke;
+    color:white;
+    -fx-border-radius: 2px;
+    -fx-border-color: purple;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+.close-btn{
+    -fx-background-color: red;
+    color:white;
+    -fx-border-radius: 2px;
+    -fx-border-color: purple;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+.save-btn{
+    -fx-background-image: url("icons/save.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
+.delete-btn{
+    -fx-background-image: url("icons/delete.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
+.undo-btn{
+    -fx-background-image: url("icons/undo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
+.redo-btn{
+    -fx-background-image: url("icons/redo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
+.new-document-btn{
+    -fx-background-image: url("icons/new-document.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
+.new-page-btn{
+    -fx-background-image: url("icons/new-page.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
+.open-btn{
+    -fx-background-image: url("icons/open.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
+.add-btn{
+    -fx-background-image: url("icons/add.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}

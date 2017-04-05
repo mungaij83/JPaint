@@ -1,0 +1,6 @@
+#line {
+    -fx-background-image: url("text.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size:100% 100%;
+}

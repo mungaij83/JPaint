@@ -1,0 +1,5 @@
+#rectangle {
+    -fx-background-image: url("basic9.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

@@ -1,0 +1,5 @@
+ {
+    "name": "Circle",
+    "class": "SphereControl",
+    "package": "plugin.circle"
+ }
